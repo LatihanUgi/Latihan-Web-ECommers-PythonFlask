@@ -1,0 +1,51 @@
+{% extends "base.html" %} <!-- extend base layout -->
+{% block isi %} <!-- isi -->
+     <section class="page-content">
+		<div class="page-block page-tabs-block cream-bg grid-container">
+			<div class="content-with-sidebar grid-100">
+                    <p>Masukan Identitas Anda Dibawah ini : </p>
+                    
+                    <form class="content-form margin-bottom" action="/register" method="post">
+						<span style="color:green">{{ form.hidden_tag() }} </span>
+						<span style="color:red">{{ error }} </span>
+                        <div class="with-shadow grid-100 light-bg margin-bottom clearfix">
+                            <div class="content-page grid-100">
+                                <h2 class="bigger-header with-border subheader-font">
+                                    Data Personal :
+                                </h2>
+                                
+                                <div class="form-input">
+                                    <label for="first_name" class="middle-color">Nama Lengkap <span class="active-color">*</span></label>
+                                    <input type="text" class="text-input dark-color light-bg" name="nama" id="first_name" value="" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="last_name" class="middle-color">Jenis Kelamin <span class="active-color">*</span></label>
+                                    <input type="radio" class="text-radio dark-color light-bg" name="jk" id="jenis_kelamin" value="P" />Pria
+                                    <input type="radio" class="text-radio dark-color light-bg" name="jk" id="jenis_kelamin" value="W" />Wanita
+                                </div>
+                                <div class="form-input">
+                                    <label for="email" class="middle-color">E-mail <span class="active-color">*</span></label>
+                                    <input type="email" class="text-input dark-color light-bg" name="email" id="email" value="" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="email" class="middle-color">HP <span class="active-color">*</span></label>
+                                    <input type="text" class="text-input dark-color light-bg" name="hp" id="hp" value="" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="phone" class="middle-color">Username <span class="active-color">*</span></label>
+                                    <input type="text" class="text-input dark-color light-bg" name="username" id="username" value="" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="Password" class="middle-color">Password</label>
+                                    <input type="text" class="text-input dark-color light-bg" name="password" id="password" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" class="button-normal uppercase light-color middle-gradient dark-gradient-hover" value="Buat Akun Baru"/>
+                        </div>    
+                    </form>
+               </div><!-- END Content  --> 
+		</div>
+</section>
+{% endblock %} <!-- isi -->

@@ -1,0 +1,187 @@
+{% extends "base.html" %} <!-- extend base layout -->
+{% block isi %} <!-- isi -->
+	<section class="page-content">
+
+            <!--  Page block  -->
+            <div class="page-block page-block-top light-bg grid-container">
+                <div class="breadcrumbs grid-100 middle-color">
+                    <a href="/index" class="dark-color active-hover">Home</a>
+                    <strong class="active-color">Checkout process 3/4</strong>
+                </div>
+            </div> <!-- END Page block  -->
+
+            <!-- Page block content  -->
+            <div class="page-block page-block-bottom cream-bg grid-container">
+
+                <!-- Content  -->
+                <div class="content-page checkout-page grid-100">
+
+                    <div class="checkout-progress progress">
+                        <div class="progress-step completed-step">
+                            <a href="/cekout1" class="step-outer dark-color active-hover">
+                                <span class="step-inner">
+                                    <span class="step-line active-bg"></span>
+                                    <span class="light-color active-bg"><i class="icon-ok"></i></span>
+                                </span>
+
+                                Shipping Adress
+                            </a>
+                        </div>
+                        <div class="progress-step completed-step">
+                            <a href="/cekout2" class="step-outer dark-color active-hover">
+                                <span class="step-inner">
+                                    <span class="step-line active-bg"></span>
+                                    <span class="light-color active-bg"><i class="icon-ok"></i></span>
+                                </span>
+
+                                Payment
+                            </a>
+                        </div>
+                        <div class="progress-step active-color current-step">
+                            <a class="step-outer">
+                                <span class="step-inner">
+                                    <span class="light-color active-bg">4</span>
+                                </span>
+
+                                Summary
+                            </a>
+                        </div>
+                        <div class="progress-step middle-color last">
+                            <a class="step-outer">
+                                <span class="step-inner">
+                                    <span>5</span>
+                                </span>
+
+                                Finish
+                            </a>
+                        </div>
+                    </div>
+
+                    <hr class="hide-on-mobile" />
+
+                    <div class="box-table">
+
+                        <div class="box grid-33 tablet-grid-33">
+                            <h2 class="subheader-font bigger-header margin-bottom">
+                                Billing information
+                            </h2>
+
+                            <ul>
+                                <li>{{session['ship'].name_billing}}</li>
+                                <li>{{session['ship'].address_billing}}</li>
+                                <li>{{session['ship'].telephone_billing}}</li>
+                            </ul>
+                        </div>
+
+                        <div class="box grid-33 tablet-grid-33">
+                            <h2 class="subheader-font bigger-header margin-bottom">
+                                Shipping adress
+                            </h2>
+
+                            <ul>
+                                <li>{{session['ship'].shipping_name}}</li>
+                                <li>{{session['ship'].shipping_address}}</li>
+                                <li>{{session['ship'].telephone_address}}</li>
+                            </ul>
+                        </div>
+
+                        <div class="box grid-33 tablet-grid-33 last">
+                            <h2 class="subheader-font bigger-header margin-bottom">
+                                Payment and delivery
+                            </h2>
+
+                            <ul>
+                                <li>Payment: <strong class="active-color">{{session['metode'].id_metode}}</strong></li>
+                                <li>Delivery: <strong class="active-color">{{session['metode'].id_ship}}</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr class="hide-on-mobile" />
+					{%set total = {'total':0,'count':0}%}
+						{%for k in keranjang%}
+							{% if total.update({'total': (total.total + (k.harga*k.qty))}) %} {% endif %}
+							{% if total.update({'count': (total.count + 1)}) %} {% endif %}
+                        {%endfor%}
+                    <div class="checkout-summary">
+                        <table>
+                            <tr class="middle-color">
+                                <th colspan="2" class="summary-name">Nama Produk</th>
+                                <th>Jumlah</th>
+                                <th>Harga Satuan</th>
+                                <th>Total</th>
+                            </tr>
+							{%for i in keranjang%}
+                            <tr>
+                                <td><img src="/static/upload/produk/{{i.gambar}}" alt="" size="50"/></td>
+                                <td class="summary-name">
+                                    <strong>{{i.nama}}</strong>
+                                    <small class="middle-color">{{i.deskripsi}}</small>
+                                </td>
+                                <td class="middle-color">{{i.qty}}</td>
+                                <td class="middle-color">{{"Rp.{:,.2f}".format(i.harga)}}</td>
+                                <td class="active-color">
+                                    <strong>{{"Rp.{:,.2f}".format(i.harga * i.qty)}}</strong>
+                                </td>
+                            </tr>
+							{%endfor%}
+                        </table>
+                    </div>
+
+                    <hr />
+
+                    <form class="content-form" action="/cekout4" method="post">
+						<span style="color:green">{{ form.hidden_tag() }} </span>
+						<input type="hidden" value="{{session['metode'].id_metode}}" name="a"/>
+						<input type="hidden" value="{{session['metode'].id_ship}}" name="b"/>
+						<input type="hidden" value="{{session['ship'].shipping_name}}" name="c"/>
+						<input type="hidden" value="{{session['ship'].shipping_address}}" name="d"/>
+						<input type="hidden" value="{{session['ship'].telephone_address}}" name="e"/>
+						<input type="hidden" value="{{session['ship'].name_billing}}" name="f"/>
+						<input type="hidden" value="{{session['ship'].address_billing}}" name="g"/>
+						<input type="hidden" value="{{session['ship'].telephone_billing}}" name="h"/>
+                        <div class="grid-container grid-parent">
+
+                            <div class="checkout-message grid-65 tablet-grid-65">
+                                <div class="form-input">
+                                    <label for="message" class="middle-color">Your comments</label>
+                                    <textarea class="textarea-input dark-color light-bg" name="message" id="message"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="checkout-total-holder grid-35 tablet-grid-35 align-right">
+                                <dl class="checkout-sub-total middle-color clearfix">
+                                    <dt class="uppercase">Sub total:</dt>
+                                    <dd>{{"Rp.{:,.2f}".format(total['total'])}}</dd>
+                                    <dt class="uppercase">Biaya Administrasi:</dt>
+                                    <dd>Rp. {{session['administrasi']}}</dd>
+                                </dl>
+
+                                <dl class="checkout-total clearfix">
+                                    <dt class="uppercase dark-color"></dt>
+                                    <dd class="active-color">{{"Rp.{:,.2f}".format(total['total']+session['administrasi'])}}</dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="content-holder align-right">
+                            <a href="/cekout2" class="pull-left button-normal light-color middle-gradient dark-gradient-hover">
+                                <b class="hide-on-desktop hide-on-tablet">Back</b>
+                                <b class="hide-on-mobile">Go to previous step</b>
+                            </a>
+
+                            <button type="submit" class="button-normal button-with-icon light-color active-gradient dark-gradient-hover">
+                                Send order
+                                <span><i class="icon-angle-right"></i></span>
+                            </button>
+                        </div>
+
+                    </form>
+                </div><!-- END Content  -->
+
+            </div><!-- END Page block  -->
+
+        </section>
+{% endblock %} <!-- isi -->

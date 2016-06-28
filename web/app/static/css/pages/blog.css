@@ -1,0 +1,150 @@
+.blog-list {
+    margin-bottom: 25px;  
+    position: relative;
+}
+
+.blog-list .blog-list-image {
+    padding-left: 0;
+}                        
+
+.blog-list-details .blog-list-title {
+    text-transform: none;
+    font-size: 20px;
+    margin: 0 20px 5px 0;
+    line-height: 1.2em;
+}
+
+.blog-list-details .blog-list-tags {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.blog-list-details .blog-list-actions {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    
+    width: 60%;
+    padding: 0 10px;
+    font-size: 12px;
+    
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.blog-details a,
+.blog-list-details .blog-list-actions a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.blog-details a:first-child,
+.blog-list-details .blog-list-actions a:first-child {
+    margin-left: 0;
+}
+
+.blog-details a i,
+.blog-list-details .blog-list-actions i {
+    font-size: 9px;
+}
+
+.blog-list-details .blog-list-actions .blog-list-more {
+    float: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 0;
+}
+
+.blog-list-details .blog-list-more i {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.block-header,
+.content-page .block-header {
+    padding: 0;
+    margin-bottom: 10px;
+    text-transform: none;
+}
+
+.blog-category {
+    font-size: 12px;
+}
+
+.blog-details {
+    font-size: 12px;
+    width: 100%;
+    padding: 5px 20px;
+    margin: 20px 0px 20px -20px;
+
+    border-top: 1px solid #e6e1da;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e6e1da;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.blog-details-share {
+    float: right;
+}
+
+.blog-details-share a {
+    margin-left: 10px !important;
+    margin-right: 0;
+}
+
+.blog-details-share a i {
+    font-size: 14px;
+}
+
+.blog-author {
+    margin: 15px 0;
+}
+
+.blog-author-photo {
+    display: block;
+    float: left;
+    max-width: 100px;
+    width: 20%;
+}
+
+.blog-author-photo img {
+    max-width: 100%;
+}
+
+.blog-author-info {
+    float: right;
+    width: 80%;
+    font-size: 12px;
+}
+
+.blog-author-info h2 {
+    margin-top: 5px;
+}
+
+.blog-author-info p {
+    margin-bottom: 0;
+}
+
+.content-form .form-input label {
+    width: 25%;
+}
+
+.content-form .form-input .text-input,
+.content-form .form-input .textarea-input {
+    width: 55%;
+}
+
+.blog-comment {
+    margin-top: 10px;
+}
+
+.blog-comment strong {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.blog-comment p {
+    margin: 10px 0px;
+    font-size: 13px;
+}

@@ -1,0 +1,108 @@
+.juicy-wrapper {
+    position: relative;  
+    z-index: 1;
+} 
+
+.juicy-slider {
+    position: relative;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    z-index: 1;
+}
+
+.juicy-slider > li {
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.juicy-slider li > a {
+    outline: none;
+}
+
+.juicy-slider li > a img {
+    border: none;
+}
+
+.juicy-slider img {
+    width: 100%;
+    display: block;
+}
+
+.juicy-layer {
+    position: absolute !important;
+    white-space: nowrap; 
+    z-index: 2;
+}
+
+.juicy-perspective {
+    position: relative;
+}
+
+.juicy-perspective > div {
+    position: absolute;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;  
+
+    /*Anti aliasing hacks*/
+    -webkit-backface-visibility : hidden;
+    -webkit-transition: translate3d(0,0,0); 
+    outline: 1px solid transparent;
+}
+
+.juicy-side {
+    margin: 0;
+    display: block;
+    position: absolute;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d; 
+    
+    /*Anti aliasing hacks*/
+    -webkit-transition: translate3d(0,0,0); 
+    outline: 1px solid transparent;
+}
+
+
+/* The slices and boxes in the Slider */
+.juicy-slice {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    top: 0;
+    
+    /*Anti aliasing hacks*/
+    -webkit-backface-visibility : hidden;
+    -webkit-transition: translate3d(0,0,0); 
+    outline: 1px solid transparent;
+}
+
+.juicy-box {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    overflow: hidden;
+    
+    /*Anti aliasing hacks*/
+    -webkit-backface-visibility : hidden;
+    -webkit-transition: translate3d(0,0,0); 
+    outline: 1px solid transparent;
+}
+
+.juicy-slider .juicy-box img,
+.juicy-slider .juicy-slice img { 
+    display: block; 
+    max-width: none;
+}

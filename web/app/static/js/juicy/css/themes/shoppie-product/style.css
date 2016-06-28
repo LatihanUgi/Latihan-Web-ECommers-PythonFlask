@@ -1,0 +1,59 @@
+.juicy-slider {
+    border-width: 1px;
+    border-style: solid;
+    
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.juicy-progress {
+    position: absolute;
+    top: 1px;
+    left: 11px;
+    right: 11px;
+    height: 2px;
+    z-index: 1;
+}
+
+.juicy-progress div {
+    height: 100%;
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9);
+    
+    box-shadow: 0px 0px 3px #ffffff;
+    -moz-box-shadow: 0px 0px 3px #ffffff;
+    -webkit-box-shadow: 0px 0px 3px #ffffff;   
+}
+
+.juicy-slider-nav.juicy-thumbs {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.juicy-thumbs .thumbs {
+    font-size: 0px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.juicy-thumbs .thumbs a {
+    display: inline-block;
+    margin-left: 5.4%;
+    width: 21%;
+}
+
+.juicy-thumbs .thumbs a:first-child {
+    margin-left: 0px;
+}
+
+.juicy-thumbs .thumbs img {
+    border-width: 1px;
+    border-style: solid;
+    display: block;
+    max-width: 100%;
+    
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

@@ -1,0 +1,87 @@
+{% extends "base.html" %} <!-- extend base layout -->
+{% block isi %} <!-- isi -->
+	<section class="page-content">
+
+            <!--  Page block  -->
+            <div class="page-block page-block-top light-bg grid-container">
+                <div class="breadcrumbs grid-100 middle-color">
+                    <a href="/index" class="dark-color active-hover">Home</a>
+                    <strong class="active-color">Checkout process 4/4</strong>
+                </div>
+            </div> <!-- END Page block  -->
+
+            <!-- Page block content  -->
+            <div class="page-block page-block-bottom cream-bg grid-container">
+
+                <!-- Content  -->
+                <div class="content-page checkout-page grid-100">
+
+                    <div class="checkout-progress progress">
+                        <div class="progress-step middle-color completed-step">
+                            <a class="step-outer middle-color">
+                                <span class="step-inner">
+                                    <span class="step-line active-bg"></span>
+                                    <span class="light-color active-bg"><i class="icon-ok"></i></span>
+                                </span>
+
+                                Shipping Adress
+                            </a>
+                        </div>
+                        <div class="progress-step middle-color completed-step">
+                            <a class="step-outer middle-color">
+                                <span class="step-inner">
+                                    <span class="step-line active-bg"></span>
+                                    <span class="light-color active-bg"><i class="icon-ok"></i></span>
+                                </span>
+
+                                Payment
+                            </a>
+                        </div>
+                        <div class="progress-step middle-color completed-step">
+                            <a class="step-outer middle-color">
+                                <span class="step-inner">
+                                    <span class="step-line active-bg"></span>
+                                    <span class="light-color active-bg"><i class="icon-ok"></i></span>
+                                </span>
+
+                                Summary
+                            </a>
+                        </div>
+                        <div class="progress-step active-color current-step last">
+                            <a class="step-outer">
+                                <span class="step-inner">
+                                    <span class="light-color active-bg">4</span>
+                                </span>
+
+                                Finish
+                            </a>
+                        </div>
+                    </div>
+
+                    <hr class="margin-bottom" />
+
+                    <div class="align-center">
+                        <div class="alert alert-success margin-bottom">
+                            Your order has been successfully sent. Thank you!
+							
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="content-holder align-center">
+                        <a href="/" class="button-normal light-color middle-gradient dark-gradient-hover hide-on-mobile">
+                            Continue Shopping
+                        </a>
+                        &nbsp; &nbsp; &nbsp;
+                        <a href="/index" class="button-normal button-with-icon light-color active-gradient dark-gradient-hover">
+                            Back to homepage
+                            <span><i class="icon-angle-right"></i></span>
+                        </a>
+                    </div>
+                </div><!-- END Content  -->
+
+            </div><!-- END Page block  -->
+
+        </section>
+{% endblock %} <!-- isi -->

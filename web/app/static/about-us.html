@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Shoppie - Modern Online Store</title>
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+        
+        <meta name="description" content="Modern Online Store">
+        <meta name="keywords" content="Shoppie, Modern Online Store">
+        <meta name="author" content="http://adamantium.sk">
+        <meta property="og:image" content="images/facebook-like-image.jpg">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700" type="text/css">
+        <link rel="stylesheet" href="css/unsemantic.css" type="text/css">
+        <link rel="stylesheet" href="css/responsive.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css">
+        
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome-ie7.min.css">
+        <![endif]-->
+        
+        <link rel="stylesheet" href="css/colors/red.css" type="text/css">
+        <link rel="stylesheet" href="css/base.css" type="text/css">
+        <link rel="stylesheet" href="css/layout.css" type="text/css">
+        
+        <!-- Fav and touch icons -->
+        <link rel="shortcut icon" href="images/icons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-touch-icon-152.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-touch-icon-120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+
+        <!-- HTML5 Shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="js/html5shim.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body class="body-background2 content-font dark-color">
+        <div id="fb-root"></div>
+        <script type="text/javascript">(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=331995390170685";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+       <a id="top"></a>
+       
+       <header>
+            <!--    Top menu    -->
+            <nav class="top-menu grid-container hide-on-tablet hide-on-mobile">
+                <div class="grid-100">
+                    <div class="fb-like" data-href="https://www.facebook.com/adamantium.solutions" data-width="120" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+
+                    <div class="top-menu-left">
+                        <ul>
+                            <li>
+                                <a href="blog.html" class="dark-color">Blog</a>
+                            </li>
+                            <li>
+                                <a href="about-us.html" class="dark-color">About Us</a>
+                            </li>
+                            <li>
+                                <a href="my-account.html" class="dark-color">My Account</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="top-menu-right">
+                        <ul>
+                            <li>
+                                <a href="log-in.html" class="dark-color" onclick="Global.clickShowToggle('#quick-login'); return false;">
+                                    <i class="icon-off"></i>
+                                    Log In
+                                </a>
+
+                                <!--    Quick login box    -->
+                                <form action="log-in.html" method="POST">
+                                    <ul class="popup-box quick-login cream-bg" id="quick-login">
+                                        <li class="arrow-top"><span class="shadow cream-bg"></span></li>
+                                        <li class="close-button">
+                                            <a href="#" class="circle-button middle-bg active-bg-hover" onclick="Global.clickShowToggle('#quick-login'); return false;"><span class="cancel"></span></a>
+                                        </li>
+                                        <li>
+                                            <input class="text-input dark-color light-bg" type="text" name="email" placeholder="your email">
+                                        </li>
+                                        <li>
+                                            <input class="text-input dark-color light-bg" type="password" name="password" placeholder="enter password">
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="forgotten.html" class="forgotten-link middle-color float-left">Have you forgotten<br /> your password?</a>
+                                            <button class="button-small button-with-icon float-right light-color middle-gradient dark-gradient-hover" type="submit">
+                                                Log in
+                                                <span><i class="icon-angle-right"></i></span>
+                                            </button>
+                                        </li>
+                                    </ul><!--    END Quick login box    -->
+                                </form>
+                            </li>
+
+                            <li>
+                                <a href="register.html" class="dark-color">Register</a>
+                            </li>
+
+                            <li id="languages-box-holder">
+                                <a href="#" class="dark-color">
+                                    EN <i class="icon-caret-down"></i>
+                                </a>
+
+                                <!--    Languages box    -->
+                                <ul class="languages-box popup-box cream-bg">
+                                    <li class="arrow-top"><span class="shadow cream-bg"></span></li>
+                                    <li class="focusor-top"></li>
+
+                                    <li>
+                                        <a href="#" class="dark-color">
+                                            <i class="icon-lang-en"></i>
+                                            English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dark-color">
+                                            <i class="icon-lang-de"></i>
+                                            German
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dark-color">
+                                            <i class="icon-lang-fr"></i>
+                                            French
+                                        </a>
+                                    </li>
+                                </ul><!--    END Languages box    -->
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav><!--    END Top Menu    -->
+
+
+            <!--    Middle header    -->
+            <div class="header-middle grid-container light-gradient">
+                <div class="grid-100">
+                    <a href="homepage.html" class="header-logo grid-20" title="Shoppie">
+                        <img src="images/img-shoppie.png" alt="Shoppie" />
+                    </a>
+
+                    <div class="grid-80 remove-whitespaces">
+                        <div class="header-middle-box">
+                            <form class="input-with-submit header-search" action="#" method="POST">
+                                <input type="text" class="text-input input-round dark-color light-bg" value="" placeholder="Search...">
+                                <button type="submit" class="input-round-submit middle-color dark-hover"><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+
+                        <div class="header-middle-box header-compare remove-whitespaces hide-on-mobile">
+                            <a href="compare.html" class="dark-color">
+                                <i class="icon-signal middle-color">&nbsp;</i>
+                                Compare (<strong>3</strong>)
+                            </a>
+                            <a href="wishlist.html" class="dark-color">
+                                <i class="icon-heart middle-color">&nbsp;</i>
+                                Wish list (<strong>7</strong>)
+                            </a>
+                        </div>
+
+                        <div class="header-middle-box last-box hide-on-mobile hide-on-tablet">
+                            <div class="header-cart" id="header-cart">
+                                <a href="cart.html" class="text-input input-round dark-color light-bg">
+                                    <strong class="active-color">
+                                        <i class="icon-shopping-cart">&nbsp;</i>
+                                        39
+                                    </strong>
+                                    items
+                                    &nbsp;|&nbsp;
+                                    <strong class="active-color">
+                                        954,00 &euro;
+                                    </strong>
+                                </a>
+
+                                <!--    Quick cart    -->
+                                <ul class="popup-box header-quick-cart cream-bg">
+                                    <li class="arrow-top"><span class="shadow cream-bg"></span></li>
+                                    <li class="focusor-top"></li>
+
+                                    <li class="quick-cart-item light-bg-hover transition-all">
+                                        <a href="#" class="quick-cart-remove circle-button middle-bg active-bg-hover"><span class="minus"></span></a>
+                                        <a href="#" class="quick-cart-add circle-button middle-bg active-bg-hover"><span class="plus"></span></a>
+                                        <a href="cart.html" class="quick-cart-left dark-color">
+                                            <span class="quick-cart-image"><img src="images/photos/quick-cart-item.jpg" alt="Pablo Coelho Men’s Suit Jacket" /></span>
+                                            <span class="quick-cart-name">Pablo Coelho Men’s Suit Jacket</span>
+                                        </a>
+                                        <a href="cart.html" class="quick-cart-right dark-color">
+                                            3 x
+                                            <strong class="active-color">125,90 &euro;</strong>
+                                        </a>
+                                    </li>
+                                    <li class="list-divider"></li>
+
+                                    <li class="quick-cart-item light-bg-hover transition-all">
+                                        <a href="#" class="quick-cart-remove circle-button middle-bg active-bg-hover"><span class="minus"></span></a>
+                                        <a href="#" class="quick-cart-add circle-button middle-bg active-bg-hover"><span class="plus"></span></a>
+                                        <a href="cart.html" class="quick-cart-left dark-color">
+                                            <span class="quick-cart-image"><img src="images/photos/quick-cart-item.jpg" alt="Pablo Coelho Men’s Suit Jacket" /></span>
+                                            <span class="quick-cart-name">Pablo Coelho Men’s Suit Jacket</span>
+                                        </a>
+                                        <a href="cart.html" class="quick-cart-right dark-color">
+                                            3 x
+                                            <strong class="active-color">125,90 &euro;</strong>
+                                        </a>
+                                    </li>
+                                    <li class="list-divider"></li>
+
+                                    <li class="quick-cart-item light-bg-hover transition-all">
+                                        <a href="#" class="quick-cart-remove circle-button middle-bg active-bg-hover"><span class="minus"></span></a>
+                                        <a href="#" class="quick-cart-add circle-button middle-bg active-bg-hover"><span class="plus"></span></a>
+                                        <a href="cart.html" class="quick-cart-left dark-color">
+                                            <span class="quick-cart-image"><img src="images/photos/quick-cart-item.jpg" alt="Pablo Coelho Men’s Suit Jacket" /></span>
+                                            <span class="quick-cart-name">Pablo Coelho Men’s Suit Jacket</span>
+                                        </a>
+                                        <a href="cart.html" class="quick-cart-right dark-color">
+                                            3 x
+                                            <strong class="active-color">125,90 &euro;</strong>
+                                        </a>
+                                    </li>
+                                    <li class="list-divider"></li>
+
+                                    <li class="quick-cart-total">
+                                        <span class="quick-cart-left dark-color">Total</span>
+                                        <span class="quick-cart-right active-color">954,00 &euro;</span>
+                                    </li>
+                                    <li class="list-divider"></li>
+
+                                    <li class="quick-cart-buttons">
+                                        <a href="cart.html" class="button-small light-color middle-gradient dark-gradient-hover">
+                                            Go to Cart
+                                        </a>
+                                        <a href="checkout-step-1.html" class="button-small light-color active-gradient dark-gradient-hover">
+                                            Check out
+                                        </a>
+                                    </li>
+                                </ul><!--    END Quick cart    -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--    END Middle header    -->
+
+
+            <!--    Main menu    -->
+            <nav class="main-menu grid-container" id="main-menu">
+                <div class="mobile-overlay"></div>
+
+                <!--   Mobile main menu    -->
+                <ul class="main-menu-mobile">
+                    <li class="middle-color light-hover">
+                        <a href="#menu-mobile" class="main-menu-item click-slide"><i class="icon-reorder"></i></a>
+                    </li>
+
+                    <li class="middle-color light-hover">
+                        <a href="homepage.html" class="main-menu-item"><i class="icon-home"></i></a>
+                    </li>
+
+                    <li class="main-menu-cart active-color light-hover">
+                        <a href="cart.html" class="main-menu-item">
+                            <i class="icon-shopping-cart">&nbsp;</i>
+                            39
+                            &nbsp;|&nbsp;
+                            954,00 &euro;
+                        </a>
+                    </li>
+
+                    <li class="middle-color light-hover">
+                        <a href="#sidebar-mobile" class="main-menu-item click-slide"><i class="icon-ellipsis-vertical"></i></a>
+                    </li>
+                </ul><!--   END Mobile main menu    -->
+
+
+                <!--   Tablet and desktop main menu    -->
+                <ul class="main-menu-desktop dark-gradient transition-all" id="menu-mobile">
+                    <li class="middle-color light-hover home">
+                        <a href="homepage.html" class="main-menu-item transition-all"><i class="icon-home"></i></a>
+                    </li>
+
+                    <li class="middle-color light-hover back">
+                        <a href="#menu-mobile" class="main-menu-item click-slide"><i class="icon-chevron-left"></i></a>
+                    </li>
+
+                    <li class="light-color active-hover">
+                        <a href="products-grid.html" class="main-menu-item transition-all">Women</a>
+
+                        <!--    Mega menu for main menu item    -->
+                        <ul class="mega-menu cream-bg full-width">
+                            <li class="mega-menu-active cream-gradient"></li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">Categories</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            View All <span class="middle-color">(3125)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover selected">
+                                            New Arrivals <span class="middle-color">(547)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Tops <span class="middle-color">(320)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Shirts & Blouses <span class="middle-color">(860)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Jumpers <span class="middle-color">(869)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Trousers <span class="middle-color">(118)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Jeans <span class="middle-color">(131)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Shorts <span class="middle-color">(238)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Dresses <span class="middle-color">(624)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Skirts <span class="middle-color">(329)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Jackets & Coats <span class="middle-color">(197)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Blazers & Waistcoats <span class="middle-color">(328)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Sportswear <span class="middle-color">(741)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Lingerie <span class="middle-color">(228)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Nightwear <span class="middle-color">(328)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Socks & Tights <span class="middle-color">(129)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Accessories <span class="middle-color">(427)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Shoes <span class="middle-color">(15)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Cosmetics <span class="middle-color">(27)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Maternity Wear <span class="middle-color">(168)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">This week</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Premium Quality products
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Conscious – Sustainable Style
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            New this Spring
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            New Arrivals Divided
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">Inspiration</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Denim Guide
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Holiday Fashion
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Holiday Lingerie
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Ladies' Spring Preview
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Gift Of The Week
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul><!--   END Mega menu for main menu item    -->
+                    </li>
+
+                    <li class="light-color active-hover">
+                        <a href="products-list.html" class="main-menu-item transition-all">Men</a>
+
+                        <!--    Mega menu for main menu item    -->
+                        <ul class="mega-menu cream-bg full-width">
+                            <li class="mega-menu-active cream-gradient"></li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">This week</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Premium products
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Sustainable Style
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            New this Spring
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            New Arrivals Divided
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Holiday Fashion
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Holiday Lingerie
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            View All <span class="middle-color">(3125)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover selected">
+                                            New Arrivals <span class="middle-color">(547)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Tops <span class="middle-color">(320)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Shirts & Blouses <span class="middle-color">(860)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Ladies' Spring Preview
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Gift Of The Week
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-box">
+                                <a href="products-detail.html" title="Young generation collection 2014" class="mega-menu-banner">
+                                    <img class="with-shadow" src="images/photos/img-menu-teaser1.jpg" alt="Young generation collection 2014" />
+                                    <span class="header-font banner-text-blue">
+                                        Young generation<br />
+                                        collection<br />
+                                        <strong>2014</strong>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul><!--   END Mega menu for main menu item    -->
+                    </li>
+
+                    <li class="light-color active-hover">
+                        <a href="products-grid.html" class="main-menu-item transition-all">Kids</a>
+
+                        <!--    Mega menu for main menu item    -->
+                        <ul class="mega-menu cream-bg">
+                            <li class="mega-menu-active cream-gradient"></li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">Inspiration</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Denim Guide
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Holiday Fashion
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Holiday Lingerie
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Ladies' Spring Preview
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Gift Of The Week
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul><!--   END Mega menu for main menu item    -->
+                    </li>
+
+                    <li class="light-color active-hover">
+                        <a href="products-list.html" class="main-menu-item transition-all">Shoes</a>
+
+                        <!--    Mega menu for main menu item    -->
+                        <ul class="mega-menu cream-bg">
+                            <li class="mega-menu-active cream-gradient"></li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">Categories</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            View All <span class="middle-color">(3125)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover selected">
+                                            New Arrivals <span class="middle-color">(547)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Tops <span class="middle-color">(320)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Shirts & Blouses <span class="middle-color">(860)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Jumpers <span class="middle-color">(869)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Trousers <span class="middle-color">(118)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Jeans <span class="middle-color">(131)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Shorts <span class="middle-color">(238)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Dresses <span class="middle-color">(624)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Skirts <span class="middle-color">(329)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Jackets & Coats <span class="middle-color">(197)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Blazers & Waistcoats <span class="middle-color">(328)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Sportswear <span class="middle-color">(741)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Lingerie <span class="middle-color">(228)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Nightwear <span class="middle-color">(328)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Socks & Tights <span class="middle-color">(129)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Accessories <span class="middle-color">(427)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Shoes <span class="middle-color">(15)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Cosmetics <span class="middle-color">(27)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Maternity Wear <span class="middle-color">(168)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">Inspiration</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Denim Guide
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Holiday Fashion
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Holiday Lingerie
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Ladies' Spring Preview
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Gift Of The Week
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul><!--   END Mega menu for main menu item    -->
+                    </li>
+
+                    <li class="light-color active-hover">
+                        <a href="products-grid.html" class="main-menu-item transition-all">Sport</a>
+
+                        <!--    Mega menu for main menu item    -->
+                        <ul class="mega-menu cream-bg">
+                            <li class="mega-menu-active cream-gradient"></li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">Categories</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            View All <span class="middle-color">(3125)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover selected">
+                                            New Arrivals <span class="middle-color">(547)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Tops <span class="middle-color">(320)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Shirts & Blouses <span class="middle-color">(860)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Jumpers <span class="middle-color">(869)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Trousers <span class="middle-color">(118)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Jeans <span class="middle-color">(131)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Shorts <span class="middle-color">(238)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Dresses <span class="middle-color">(624)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Skirts <span class="middle-color">(329)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Jackets & Coats <span class="middle-color">(197)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Blazers & Waistcoats <span class="middle-color">(328)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Sportswear <span class="middle-color">(741)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Lingerie <span class="middle-color">(228)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Nightwear <span class="middle-color">(328)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Socks & Tights <span class="middle-color">(129)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Accessories <span class="middle-color">(427)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Shoes <span class="middle-color">(15)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Cosmetics <span class="middle-color">(27)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Maternity Wear <span class="middle-color">(168)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">This week</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Premium Quality products
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Conscious – Sustainable Style
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            New this Spring
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            New Arrivals Divided
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">Inspiration</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Denim Guide
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Holiday Fashion
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Holiday Lingerie
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Ladies' Spring Preview
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Gift Of The Week
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul><!--   END Mega menu for main menu item    -->
+                    </li>
+
+                    <li class="light-color active-hover">
+                        <a href="products-list.html" class="main-menu-item transition-all">Template pages</a>
+
+                        <!--    Mega menu for main menu item    -->
+                        <ul class="mega-menu cream-bg">
+                            <li class="mega-menu-active cream-gradient"></li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">E-shop pages</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="homepage.html" class="dark-color active-hover">
+                                            Homepage
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Products grid listing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-list.html" class="dark-color active-hover">
+                                            Products table listing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-detail.html" class="dark-color active-hover">
+                                            Product detail page
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="compare.html" class="dark-color active-hover">
+                                            Compare products
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="wishlist.html" class="dark-color active-hover">
+                                            Wishlist page
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="my-account.html" class="dark-color active-hover">
+                                            My account
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="cart.html" class="dark-color active-hover">
+                                            Shopping cart
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="checkout-step-1.html" class="dark-color active-hover">
+                                            Checkout step 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="checkout-step-2.html" class="dark-color active-hover">
+                                            Checkout step 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="checkout-step-3.html" class="dark-color active-hover">
+                                            Checkout step 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="checkout-step-4.html" class="dark-color active-hover">
+                                            Checkout step 4
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="checkout-step-5.html" class="dark-color active-hover">
+                                            Checkout step 5
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="register.html" class="dark-color active-hover">
+                                            Registration
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">Common pages</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="about-us.html" class="dark-color active-hover">
+                                            About us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="dark-color active-hover">
+                                            Blog listing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-detail.html" class="dark-color active-hover">
+                                            Blog detail
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html" class="dark-color active-hover">
+                                            Contact us
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul><!--   END Mega menu for main menu item    -->
+                    </li>
+
+                    <li class="light-color active-hover">
+                        <a href="products-grid.html" class="main-menu-item transition-all">What’s new</a>
+                    </li>
+
+                    <li class="active-color dark-hover">
+                        <a href="products-list.html" class="main-menu-item transition-all"><i class="icon-star"></i> Sale</a>
+
+                        <!--    Mega menu for main menu item    -->
+                        <ul class="mega-menu cream-bg full-width">
+                            <li class="mega-menu-active cream-gradient"></li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">Best value</span>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Premium Quality products
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Conscious – Sustainable Style
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            New this Spring
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            New Arrivals Divided
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Ladies' Spring Preview
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="products-grid.html" class="dark-color active-hover">
+                                            Gift Of The Week
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">This week</span>
+                                <a href="products-detail.html" title="50% Winter sale" class="mega-menu-banner">
+                                    <img class="with-shadow" src="images/photos/img-menu-teaser2.jpg" alt="50% Winter sale" />
+                                    <span class="header-font banner-text-white banner-size-1">
+                                        <strong>50%</strong><br />
+                                        Winter sale
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">Inspiration</span>
+                                <a href="products-detail.html" title="New 2014 collection Zara Lauren" class="mega-menu-banner">
+                                    <img class="with-shadow" src="images/photos/img-menu-teaser3.jpg" alt="New 2014 collection Zara Lauren" />
+                                    <span class="header-font banner-text-white banner-size-2">
+                                        <strong>
+                                            New 2014<br />
+                                            collection
+                                        </strong><br />
+                                        Zara Lauren
+                                    </span>
+                                </a>
+                            </li>
+                        </ul><!--   END Mega menu for main menu item    -->
+                    </li>
+                </ul><!--   END Tablet and desktop main menu    -->
+
+            </nav><!--    END Main Menu    -->
+       </header>
+       
+       
+       
+       
+       
+       <section class="page-content">
+           
+           <!--  Page block  -->
+           <div class="page-block page-block-top light-bg grid-container">
+               <div class="breadcrumbs grid-100 middle-color">
+                    <a href="homepage.html" class="dark-color active-hover">Home</a>
+                    <a href="about-us.html" class="dark-color active-hover">About us</a>
+                    <strong class="active-color">All about shopping</strong>
+               </div>
+           </div> <!-- END Page block  -->
+           
+           <!-- Page block content  -->
+           <div class="page-block page-block-bottom cream-bg grid-container">
+               
+               <div class="sidebar-shadow push-25"></div>
+                    
+               <!-- Sidebar  -->
+               <div class="sidebar grid-25 cream-gradient transition-all" id="sidebar-mobile">
+                    
+                    <!-- Sidebar submenu box --> 
+                    <div class="sidebar-box sidebar-top cream-gradient">    
+                        <nav class="submenu">
+                            <ul class="expandable-menu">
+                                <li class="align-right back">
+                                    <a href="#sidebar-mobile" class="dark-color active-hover click-slide"><i class="icon-chevron-right"></i></a>
+                                </li>
+                                <li>
+                                    <a href="about-us.html" class="dark-color active-hover selected">All about shopping</a>
+                                </li>
+                                <li class="sidebar-divider"></li>
+                                <li>
+                                    <a href="about-us.html" class="dark-color active-hover">Postage</a>
+                                </li>
+                                <li class="sidebar-divider"></li>
+                                <li>
+                                    <a href="about-us.html" class="dark-color active-hover">Delivery and payment</a>
+                                </li>
+                                <li class="sidebar-divider"></li>
+                                <li>
+                                    <a href="about-us.html" class="dark-color active-hover">Terms and conditions</a>
+                                </li>
+                                <li class="sidebar-divider"></li>
+                                <li>
+                                    <a href="contact.html" class="dark-color active-hover">Contact</a>
+                                </li>
+                                <li class="sidebar-divider"></li>
+                                <li>
+                                    <a href="about-us.html" class="dark-color active-hover">Career</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div><!-- END Sidebar submenu box --> 
+                                                    
+               </div><!-- END Sidebar  --> 
+               
+               <!-- Content  --> 
+               <div class="content-with-sidebar grid-75">
+                    
+                    <div class="with-shadow grid-100 light-bg">
+                        <div class="content-page grid-100">
+                            <h1 class="active-color header-font with-border full">All about shopping</h1>
+                            <p>
+                                Wondering how is the order Shoppie.com ? How to pay for goods and to have it transported? 
+                                Then you are on the right page. Detail, we introduce an information system, which takes care of the whole process of your order.
+                            </p>
+                            <p>
+                                In order to simplify and automate the ordering process we use as the main contact information e-mail address. 
+                                It is preferred that your <strong>e-mail will not forget</strong>, and do not worry about that because you order confirmation 
+                                telephone call to someone right here in the least appropriate moment. To get the most accurate idea, let's describe each step. 
+                            </p>
+                            
+                            <hr />
+                            
+                            <h2 class="subheader-font">
+                                Progress orders
+                            </h2>
+                            <p>At this point you can go shopping until the end of the process, give you an idea how easy it is. From cart to delivery.</p>
+                            
+                            <hr />
+                            
+                            <h2 class="subheader-font">
+                                Methods of delivery
+                            </h2>
+                            <p>Ordered goods will be delivered by several ways. In addition to a personal collection is free at your disposal standard shipping transportation and transportation Comfort @ shoppie, offering delivery of the goods on the floor and so on.</p>
+                            
+                            <hr />
+                            
+                            <h2 class="subheader-font">
+                                Progress orders
+                            </h2>
+                            <p>At this point you can go shopping until the end of the process, give you an idea how easy it is. From cart to delivery.</p>
+                            
+                            <hr />
+                            
+                            <h2 class="subheader-font">
+                                Methods of delivery
+                            </h2>
+                            <p>Ordered goods will be delivered by several ways. In addition to a personal collection is free at your disposal standard shipping transportation and transportation Comfort @ shoppie, offering delivery of the goods on the floor and so on.</p>
+                            
+                            <hr />
+                            
+                            <h2 class="subheader-font">
+                                Progress orders
+                            </h2>
+                            <p>At this point you can go shopping until the end of the process, give you an idea how easy it is. From cart to delivery.</p>
+                            
+                            <hr />
+                            
+                            <h2 class="subheader-font">
+                                Methods of delivery
+                            </h2>
+                            <p>Ordered goods will be delivered by several ways. In addition to a personal collection is free at your disposal standard shipping transportation and transportation Comfort @ shoppie, offering delivery of the goods on the floor and so on.</p>
+                            
+                            <hr />
+                            
+                            <h2 class="subheader-font">
+                                Progress orders
+                            </h2>
+                            <p>At this point you can go shopping until the end of the process, give you an idea how easy it is. From cart to delivery.</p>
+                            
+                            <hr />
+                            
+                            <h2 class="subheader-font">
+                                Methods of delivery
+                            </h2>
+                            <p>Ordered goods will be delivered by several ways. In addition to a personal collection is free at your disposal standard shipping transportation and transportation Comfort @ shoppie, offering delivery of the goods on the floor and so on.</p>
+                        </div>
+                    </div>
+                    
+               </div><!-- END Content  --> 
+               
+           </div> <!-- END Page block  -->
+                    
+       </section>
+       
+       
+       <footer>
+
+            <!-- Footer blocks  -->
+            <div class="footer-top grid-container clearfix">
+
+                <div class="grid-50 grid-parent">
+                    <div class="grid-33 tablet-grid-33">
+                        <h3 class="light-color subheader-font">
+                            <strong>Our support</strong>
+                        </h3>
+
+                        <ul class="middle-color">
+                            <li class="light-hover">
+                                <a href="#">Delivery Information</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Privacy policy</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Terms & Condition</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-33 tablet-grid-33">
+                        <h3 class="light-color subheader-font">
+                            <strong>Our service</strong>
+                        </h3>
+
+                        <ul class="middle-color">
+                            <li class="light-hover">
+                                <a href="my-account.html">My Account</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Order History</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Returns</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Site map</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-33 tablet-grid-33">
+                        <h3 class="light-color subheader-font">
+                            <strong>Information</strong>
+                        </h3>
+
+                        <ul class="middle-color">
+                            <li class="light-hover">
+                                <a href="about-us.html">About us</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Delivery information</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Privacy policy</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Terms & Condition</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid-50 grid-parent">
+                    <div class="grid-50 tablet-grid-50">
+                        <h3 class="light-color subheader-font">
+                            <strong>Payment</strong>
+                        </h3>
+
+                        <p class="middle-color">
+                            Lorem ipsum dolor sit amet, de consectetur adipiscing elit
+                        </p>
+
+                        <a href="#"><img src="images/icons/icon-visa-e.png" alt="Visa Electron" /></a>
+                        <a href="#"><img src="images/icons/icon-mastercard.png" alt="MasterCard" /></a>
+                        <a href="#"><img src="images/icons/icon-paypal.png" alt="PayPal" /></a>
+                        <a href="#"><img src="images/icons/icon-visa.png" alt="Visa" /></a>
+                    </div>
+                    <div class="grid-50 tablet-grid-50">
+                        <h3 class="light-color">
+                            <strong>Newsletter</strong>
+                        </h3>
+
+                        <p class="middle-color">
+                            Lorem ipsum dolor sit amet, de consectetur adipiscing elit
+                        </p>
+
+                        <form method="POST" action="homepage.html">
+                            <div class="input-with-button">
+                                <input type="text" placeholder="Enter your email..." name="email" class="text-input dark-color light-bg">
+                                <button type="submit" class="middle-color dark-hover"><i class="icon-plus"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div><!-- END Footer blocks  -->
+
+
+            <!-- Footer copyright and social buttons -->
+            <div class="footer-bottom grid-container clearfix">
+                <div class="footer-copyright middle-color grid-70">
+                    Copyright 2012 Shoppie. Designed by Viktor Karvai. Code by <a href="http://www.adamantium.sk" class="light-hover">Adamantum Solutions</a>. All Rights Reserved
+                </div>
+
+                <div class="footer-social grid-30">
+                    <a href="https://www.facebook.com/adamantium.solutions" class="middle-color light-hover transition-color" target="_blank">
+                        <i class="icon-facebook-sign"></i>
+                    </a>
+                    <a href="https://twitter.com/AdamantiumSol" class="middle-color light-hover transition-color" target="_blank">
+                        <i class="icon-twitter"></i>
+                    </a>
+                    <a href="http://www.linkedin.com/pub/michal-juras/28/166/375" class="middle-color light-hover transition-color" target="_blank">
+                        <i class="icon-linkedin-sign"></i>
+                    </a>
+                    <a href="http://pinterest.com/" class="middle-color light-hover transition-color" target="_blank">
+                        <i class="icon-pinterest-sign"></i>
+                    </a>
+                    <a href="https://plus.google.com/u/0/113332714808714572645/posts" class="middle-color light-hover transition-color" target="_blank">
+                        <i class="icon-google-plus-sign"></i>
+                    </a>
+                </div>
+            </div><!-- END Footer copyright and social buttons -->
+
+       </footer>
+
+
+       <!-- Scripts -->
+       <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+       <script type="text/javascript" src="js/shoppie.scripts.js"></script>
+       <script type="text/javascript"> 
+            Global.documentReady();  
+       </script>
+
+       <!-- css3-mediaqueries.js for IE less than 9 -->
+       <!--[if lt IE 9]>
+       <script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+       <![endif]-->
+    </body>
+</html>

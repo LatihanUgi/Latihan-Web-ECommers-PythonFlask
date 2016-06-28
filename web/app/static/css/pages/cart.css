@@ -1,0 +1,131 @@
+.cart-product {
+    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid rgba(88, 88, 88, 0.2);  
+    position: relative;
+}
+
+.cart-product-remove {
+    position: absolute;
+    top: 50%;    
+    right: -8px;
+    margin-top: -13px;
+    transition: opacity 200ms ease, visibility 200ms ease;
+}
+
+.cart-product:hover .cart-product-remove {
+    display: block !important;
+} 
+
+.cart-product.last {
+    border-bottom: none;
+}
+
+.cart-product-image img {
+    max-width: 100%;
+}
+
+.cart-product-info {
+    display: table;
+    width: 100%;           
+    vertical-align: middle;
+}
+
+.cart-product-title {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.well-box-middle strong {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.cart-product-title .cart-product-category {
+    display: block;
+    font-size: 12px;
+}
+
+.cart-product-options {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.cart-product-options label {
+    margin-left: 10px;
+}    
+
+.cart-shipping {
+    font-size: 13px;
+}     
+
+.cart-shipping .sidebar {
+    padding-left: 0px;
+    padding-top: 15px;
+}
+
+.cart-shipping .submenu > ul > li > a {
+    text-transform: none;
+    font-size: 13px;
+    padding-top: 8px;
+    font-weight: normal;    
+}     
+
+.cart-shipping .content-form .form-input label {
+    width: 40%;
+}   
+
+.cart-shipping .content-form .form-input .text-input, 
+.cart-shipping .content-form .form-input .textarea-input,
+.cart-shipping .form-input .custom-selectbox {
+    width: 57%;
+    float: right;
+}
+
+.cart-shipping .form-input .custom-selectbox span {
+    max-width: 70%;
+}
+
+.cart-shipping .text-input, 
+.cart-shipping .textarea-input {
+    padding: 8px 13px;
+}
+
+.cart-sub-total {
+    display: block;
+}
+
+.cart-sub-total dt,
+.cart-sub-total dd {
+    float: left;
+    padding: 8px 0px;
+}
+
+.cart-sub-total dt {
+    width: 60%;
+}
+
+.cart-sub-total dd {
+    width: 40%;
+}
+
+.cart-total {
+    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid rgba(88, 88, 88, 0.2);
+    border-top: 1px solid #e1e1e1;
+    border-top: 1px solid rgba(88, 88, 88, 0.2);
+    width: 100%;
+    
+    font-weight: bold;
+    font-size: 30px;
+    padding: 18px 20px;
+    
+    margin: 15px 0px;
+    margin-left: -20px;
+}
+
+.cart-total dt,
+.cart-total dd {
+    float: left;   
+    width: 50%;
+}

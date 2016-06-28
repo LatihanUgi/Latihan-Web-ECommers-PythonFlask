@@ -1,0 +1,57 @@
+{% extends "base.html" %} <!-- extend base layout -->
+{% block isi %} <!-- isi -->
+	<section class="page-content">
+			 <!--  Page block  -->
+             <!--  Page block  -->
+            <div class="page-block page-block-top light-bg grid-container">
+                <div class="breadcrumbs grid-100 middle-color">
+                    <a href="/" class="dark-color active-hover">Home</a>
+                    <strong class="active-color">Riwayat Belanja</strong>
+                </div>
+            </div> <!-- END Page block  -->
+            <!-- Page block content  -->
+            <div class="page-block page-block-bottom cream-bg grid-container">
+				{%for i in riwayat%}
+				<div class="grid-100">
+                       <div class="product-wide light-bg clearfix">
+                           <div class="grid-60 tablet-grid-60 mobile-grid-65 product-description">
+                                <h3 class="product-title subheader-font">
+                                   <a href="/riwayatdetail/{{i.id_cekout}}" class="dark-color active-hover">
+                                       Transaksi <strong> {{i.id_cekout}}</strong>
+                                   </a>
+                               </h3>
+                               Waktu : <a href="/riwayatdetail/{{i.id_cekout}}" class="product-category middle-color dark-hover">{{i.tanggal}}</a>
+							   <p class="dark-color hide-on-mobile">Pembayaran : <b>{{i.metode}}</b>, &nbsp
+                               Pengiriman : <b>{{i.ship}}</b></p>
+                           </div>
+                           
+                           <div class="grid-35 tablet-grid-35 hide-on-mobile product-actions">
+                                <div class="product-price active-color">
+                                    {%if i.status==1%}
+										<strong><font color="red">Belum Dibayar</font></strong>
+									{%endif%}
+									{%if i.status==2%}
+										<strong><font color="blue">Sudah Dibayar</font></strong>
+									{%endif%}
+									{%if i.status==3%}
+										<strong><font color="purple">Sedang Dikirim</font></strong>
+									{%endif%}
+									{%if i.status==4%}
+										<strong><font color="green">Sudah Diterima</font></strong>
+									{%endif%}
+                                </div>
+                                <div class="clear"></div>
+                                
+                                <div class="button-dual light-color transition-all">
+                                    <a href="/riwayatdetail/{{i.id_cekout}}" class="button-dual-left middle-gradient dark-gradient-hover">
+                                        Lihat Detail <i class="icon-shopping-cart"></i>
+                                    </a>
+                                </div> 
+                           </div> 
+                       </div>
+                   </div><!--  END Product   --> 
+                {%endfor%}  
+            </div><!-- END Page block  -->
+
+        </section>
+{% endblock %} <!-- isi -->

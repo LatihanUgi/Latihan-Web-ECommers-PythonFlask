@@ -1,0 +1,68 @@
+.compare-column {
+    padding: 10px 0;
+    position: relative;
+}
+
+.compare-column .compare-remove {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.compare-column:hover .compare-remove {
+    display: block !important;
+}
+
+.compare-description {
+    margin-left: -10px;
+    margin-right: 10px;
+}
+
+.compare-column .compare-row {
+    padding: 10px 15px;
+    border-bottom:  1px solid #EFEFEF;
+    border-bottom:  1px solid rgba(88, 88, 88, 0.2);
+    text-align: center;
+}
+
+.compare-column .compare-row:last-child {
+    border-bottom: none;
+}
+
+.compare-description .compare-row {
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: bold;
+}
+
+.compare-column .compare-row img {
+    max-width: 100%;
+}
+
+.compare-image {
+    min-height: 170px;
+}
+
+.compare-product {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.compare-price strong {
+    font-size: 24px;    
+    display: block;
+    line-height: 1.2em;
+}
+
+.compare-price del {
+    font-size: 14px;
+}
+
+.compare-option {
+    font-size: 16px;
+    font-weight: bold; 
+}
+
+.compare-column .compare-action {
+    padding-top: 20px;
+}

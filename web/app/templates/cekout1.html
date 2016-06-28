@@ -1,0 +1,125 @@
+{% extends "base.html" %} <!-- extend base layout -->
+{% block isi %} <!-- isi -->
+     <section class="page-content">
+
+            <!--  Page block  -->
+            <div class="page-block page-block-top light-bg grid-container">
+                <div class="breadcrumbs grid-100 middle-color">
+                    <a href="/" class="dark-color active-hover">Home</a>
+                    <strong class="active-color">Checkout process 1/4</strong>
+                </div>
+            </div> <!-- END Page block  -->
+
+            <!-- Page block content  -->
+            <div class="page-block page-block-bottom cream-bg grid-container">
+
+                <!-- Content  -->
+                <div class="content-page checkout-page grid-100">
+
+                    <div class="checkout-progress progress">
+                        <div class="progress-step active-color current-step">
+                            <a class="step-outer">
+                                <span class="step-inner">
+                                    <span class="light-color active-bg">1</span>
+                                </span>
+
+                                Shipping Adress
+                            </a>
+                        </div>
+                        <div class="progress-step middle-color">
+                            <a class="step-outer">
+                                <span class="step-inner">
+                                    <span>2</span>
+                                </span>
+
+                                Payment
+                            </a>
+                        </div>
+                        <div class="progress-step middle-color">
+                            <a class="step-outer">
+                                <span class="step-inner">
+                                    <span>3</span>
+                                </span>
+
+                                Summary
+                            </a>
+                        </div>
+                        <div class="progress-step middle-color last">
+                            <a class="step-outer">
+                                <span class="step-inner">
+                                    <span>4</span>
+                                </span>
+
+                                Finish
+                            </a>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <form class="content-form" action="/cekout2" method="post">
+						<span style="color:green">{{ form.hidden_tag() }} </span>
+                        <div class="box-table">
+
+                            <div class="box grid-50 tablet-grid-50">
+                                <h2 class="subheader-font bigger-header margin-bottom">
+                                    Alamat Billing
+                                </h2>
+
+                                <div class="form-input">
+                                    <label for="billing-name" class="middle-color">Nama</label>
+                                    <input type="text" class="text-input dark-color light-bg" name="name_billing" id="billing-name" value="{{session['ship'].name_billing}}" />
+                                </div>
+
+                                <div class="form-input">
+                                    <label for="billing-address" class="middle-color">Address</label>
+                                    <input type="text" class="text-input dark-color light-bg" name="address_billing" id="billing-address" value="{{session['ship'].address_billing}}" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="billing-name" class="middle-color">Telephone</label>
+                                    <input type="tel" class="text-input dark-color light-bg" name="telephone_billing" id="billing-name" value="{{session['ship'].telephone_billing}}" />
+                                </div>
+                            </div>
+
+                            <div class="box grid-50 tablet-grid-50 last">
+                                <h2 class="subheader-font bigger-header margin-bottom">
+                                    Alamat Pengiriman produk
+                                </h2>
+
+                               <div class="form-input">
+                                    <label for="shipping-name" class="middle-color">Name</label>
+                                    <input type="text" class="text-input dark-color light-bg" name="shipping_name" id="shipping-name" value="{{session['ship'].shipping_name}}" />
+                                </div>
+
+                                <div class="form-input">
+                                    <label for="shipping-address" class="middle-color">Address</label>
+                                    <input type="text" class="text-input dark-color light-bg" name="shipping_address" id="shipping-address" value="{{session['ship'].shipping_address}}" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="billing-name" class="middle-color">Telephone</label>
+                                    <input type="tel" class="text-input dark-color light-bg" name="telephone_address" id="billing-name" value="{{session['ship'].telephone_address}}" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="content-holder align-right">
+                            <a href="/cart" class="pull-left button-normal light-color middle-gradient dark-gradient-hover">
+                                <b class="hide-on-desktop hide-on-tablet">Back</b>
+                                <b class="hide-on-mobile">Go to previous step</b>
+                            </a>
+
+                            <button type="submit" class="button-normal button-with-icon light-color active-gradient dark-gradient-hover">
+                                Continue to Payment
+                                <span><i class="icon-angle-right"></i></span>
+                            </button>
+                        </div>
+
+                    </form>
+                </div><!-- END Content  -->
+
+            </div><!-- END Page block  -->
+
+        </section>
+{% endblock %} <!-- isi -->

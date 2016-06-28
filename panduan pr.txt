@@ -1,0 +1,15 @@
+Berikut Saya Lampirkan Web E-Commerce namun ada beberapa fitur yang belum, tolong dibuatkan
+
+1. Riwayat Belanja pada saat di klik detail
+2. Wishlist
+3. Kelola Akun Customer
+4. Tampil Produk
+5. About Us, Cara Belanja, Blog
+6. Halaman Home
+5. Halaman Admin (backend) saya sediakan templatenya . halaman admin digunakan oleh admin e-commerce untuk mengelola transaksi, menambah produk baru, mengelola harga, mengubah status transaksi customer, dll.
+
+setelah berhasil coba di upload di Google Apps Engine, tutorial lengkap ada di internet. nanti tolong di share URL buatan kamu ya..
+
+setelah kamu paham konsep web nya dan menyelesaikan fitur diatas, coba dibuatkan web e-commerce dengan template lainnya. download template e-commerce free : https://w3layouts.com/free-responsive-html5-css3-website-templates/
+
+diusahakan selesai sebelum 19 Februari 2016 ya . kalau progress nya bagus, nanti saya libatkan di ccit expo untuk mengisi Workshop Python :)

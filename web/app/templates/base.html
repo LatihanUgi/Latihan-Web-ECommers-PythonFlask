@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Shoppie - Modern Online Store</title>
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+        
+        <meta name="description" content="Modern Online Store">
+        <meta name="keywords" content="Shoppie, Modern Online Store">
+        <meta name="author" content="http://adamantium.sk">
+        <meta property="og:image" content="images/facebook-like-image.jpg">
+
+        <!-- Styles -->
+        <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700" type="text/css">-->
+        <link rel="stylesheet" href="/static/css/unsemantic.css" type="text/css">
+        <link rel="stylesheet" href="/static/css/responsive.css" type="text/css">
+        <link rel="stylesheet" href="/static/css/font-awesome/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="/static/js/juicy/css/juicy.css" type="text/css">
+        <link rel="stylesheet" href="/static/js/juicy/css/themes/shoppie/style.css" type="text/css">
+        
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome-ie7.min.css">
+        <![endif]-->
+        
+        <link rel="stylesheet" href="/static/css/colors/red.css" type="text/css">
+        <link rel="stylesheet" href="/static/css/base.css" type="text/css">
+        <link rel="stylesheet" href="/static/css/layout.css" type="text/css">
+        <link rel="stylesheet" href="/static/css/pages/homepage.css" type="text/css">
+        <link rel="stylesheet" href="/static/css/pages/checkout.css" type="text/css">
+
+        <!-- Fav and touch icons -->
+        <link rel="shortcut icon" href="/static/images/icons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/images/icons/apple-touch-icon-152.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/static/images/icons/apple-touch-icon-120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/static/images/icons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="/static/images/icons/apple-touch-icon.png">
+
+        <!-- HTML5 Shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="js/html5shim.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body class="body-background2 content-font dark-color">
+        <div id="fb-root"></div>
+        <script type="text/javascript">(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=331995390170685";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+       <a id="top"></a>
+
+
+       <header>
+            <!--    Top menu    -->
+            <nav class="top-menu grid-container hide-on-tablet hide-on-mobile">
+                <div class="grid-100">
+                    <div class="fb-like" data-href="https://www.facebook.com/adamantium.solutions" data-width="120" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+
+                    <div class="top-menu-left">
+                        <ul>
+                            <li>
+                                <a href="blog.html" class="dark-color">Blog</a>
+                            </li>
+                            <li>
+                                <a href="about-us.html" class="dark-color">About Us</a>
+                            </li>
+							{% if session['nama'] %}
+                            <li>
+                                <a href="my-account.html" class="dark-color">My Account</a>
+                            </li>
+							{% endif %}
+                        </ul>
+                    </div>
+
+                    <div class="top-menu-right">
+                        <ul>
+							{% if session['nama'] %}
+                            <li>
+								Selamat Datang, <font color='blue'>{{session['nama']}}</font> ,
+                                <a href="/logout" class="dark-color">Logout</a>
+                            </li>
+							{% else %}
+                            <li>
+                                <a href="" class="dark-color" onclick="Global.clickShowToggle('#quick-login'); return false;">
+                                    <i class="icon-off"></i>
+                                    Log In {{session['nama']}}
+                                </a>
+
+                                <!--    Quick login box    -->
+                                <form action="/login" method="post" name="login">
+									<span style="color:green">{{ form.hidden_tag() }} </span>
+                                    <ul class="popup-box quick-login cream-bg" id="quick-login">
+                                        <li class="arrow-top"><span class="shadow cream-bg"></span></li>
+                                        <li class="close-button">
+                                            <a href="#" class="circle-button middle-bg active-bg-hover" onclick="Global.clickShowToggle('#quick-login'); return false;"><span class="cancel"></span></a>
+                                        </li>
+                                        <li>
+                                            <input class="text-input dark-color light-bg" type="text" name="username" placeholder="your username">
+                                        </li>
+                                        <li>
+                                            <input class="text-input dark-color light-bg" type="password" name="password" placeholder="enter password">
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="/lupa" class="forgotten-link middle-color float-left">Have you forgotten<br /> your password?</a>
+                                            <input value="Log in"class="button-small button-with-icon float-right light-color middle-gradient dark-gradient-hover" type="submit">
+                                             
+                                        </li>
+                                    </ul><!--    END Quick login box    -->
+                                </form>
+                            </li>
+                            <li>
+                                <a href="/register" class="dark-color">Register</a>
+                            </li>
+							{% endif %}
+
+                            <li id="languages-box-holder">
+                                <a href="#" class="dark-color">
+                                    EN <i class="icon-caret-down"></i>
+                                </a>
+
+                                <!--    Languages box    -->
+                                <ul class="languages-box popup-box cream-bg">
+                                    <li class="arrow-top"><span class="shadow cream-bg"></span></li>
+                                    <li class="focusor-top"></li>
+
+                                    <li>
+                                        <a href="#" class="dark-color">
+                                            <i class="icon-lang-en"></i>
+                                            English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dark-color">
+                                            <i class="icon-lang-de"></i>
+                                            German
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dark-color">
+                                            <i class="icon-lang-fr"></i>
+                                            French
+                                        </a>
+                                    </li>
+                                </ul><!--    END Languages box    -->
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav><!--    END Top Menu    -->
+
+
+            <!--    Middle header    -->
+            <div class="header-middle grid-container light-gradient">
+                <div class="grid-100">
+                    <a href="/index" class="header-logo grid-20" title="Shoppie">
+                        <img src="/static/images/img-shoppie.png" alt="Shoppie" />
+                    </a>
+
+                    <div class="grid-80 remove-whitespaces">
+                        <div class="header-middle-box">
+                            <form class="input-with-submit header-search" action="/cari" method="POST">
+                                <input type="text" class="text-input input-round dark-color light-bg" value="" placeholder="Search...">
+                                <button type="submit" class="input-round-submit middle-color dark-hover"><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+						{%if session['nama'] %}
+                        <div class="header-middle-box header-compare remove-whitespaces hide-on-mobile">
+                            <a href="wishlist.html" class="dark-color">
+                                <i class="icon-heart middle-color">&nbsp;</i>
+                                Wish list (<strong>7</strong>)
+                            </a>
+                        </div>
+                        <div class="header-middle-box last-box hide-on-mobile hide-on-tablet">
+                            <div class="header-cart" id="header-cart">
+								{%set total = {'total':0,'count':0}%}
+								{%for k in keranjang%}
+									 {% if total.update({'total': (total.total + (k.harga*k.qty))}) %} {% endif %}
+									 {% if total.update({'count': (total.count + 1)}) %} {% endif %}
+                                {%endfor%}
+								<a href="/cart" class="text-input input-round dark-color light-bg">
+                                    <strong class="active-color">
+                                        <i class="icon-shopping-cart">&nbsp;</i>
+                                        {{total['count']}}
+                                    </strong>
+                                    items
+                                    &nbsp;|&nbsp;
+                                    <strong class="active-color">
+                                        {{"Rp.{:,.2f}".format(total['total'])}}
+                                    </strong>
+                                </a>
+								{% if session['nama'] %}
+                                <!--    Quick cart    -->
+                                <ul class="popup-box header-quick-cart cream-bg">
+                                    <li class="arrow-top"><span class="shadow cream-bg"></span></li>
+                                    <li class="focusor-top"></li>
+									{%for k in keranjang%}
+                                    <li class="quick-cart-item light-bg-hover transition-all">
+                                        <a href="/cart" class="quick-cart-left dark-color">
+                                            <span class="quick-cart-image"><img src="/static/upload/produk/{{k.gambar}}" alt="{{k.nama}}" /></span>
+                                            <span class="quick-cart-name">{{k.nama}}{{k.id_customer}}</span>
+                                        </a>
+                                        <a href="/cart" class="quick-cart-right dark-color">
+                                            {{k.qty}} x
+                                            <strong class="active-color">{{"Rp.{:,.2f}".format(k.harga)}}</strong>
+                                        </a>
+                                    </li>
+                                    <li class="list-divider"></li>
+									{%endfor%}
+
+                                    <li class="quick-cart-total">
+                                        <span class="quick-cart-left dark-color">Total</span>
+                                        <span class="quick-cart-right active-color">{{"Rp.{:,.2f}".format(total['total'])}}</span>
+                                    </li>
+                                    <li class="list-divider"></li>
+
+                                    <li class="quick-cart-buttons">
+                                        <a href="/cart" class="button-small light-color middle-gradient dark-gradient-hover">
+                                            Go to Cart
+                                        </a>
+                                        <a href="/cekout1" class="button-small light-color active-gradient dark-gradient-hover">
+                                            Check out
+                                        </a>
+                                    </li>
+                                </ul><!--    END Quick cart    -->
+								{%endif%}
+                            </div>
+                        </div>
+						{%endif%}
+                    </div>
+                </div>
+            </div><!--    END Middle header    -->
+
+
+            <!--    Main menu    -->
+            <nav class="main-menu grid-container" id="main-menu">
+                <div class="mobile-overlay"></div>
+
+                <!--   Mobile main menu    -->
+                <ul class="main-menu-mobile">
+                    <li class="middle-color light-hover">
+                        <a href="#menu-mobile" class="main-menu-item click-slide"><i class="icon-reorder"></i></a>
+                    </li>
+
+                    <li class="middle-color light-hover">
+                        <a href="/index" class="main-menu-item"><i class="icon-home"></i></a>
+                    </li>
+
+                    <li class="main-menu-cart active-color light-hover">
+                        <a href="/cart" class="main-menu-item">
+                            <i class="icon-shopping-cart">&nbsp;</i>
+                            39
+                            &nbsp;|&nbsp;
+                            954,00 &euro;
+                        </a>
+                    </li>
+                </ul><!--   END Mobile main menu    -->
+
+
+                <!--   Tablet and desktop main menu    -->
+                <ul class="main-menu-desktop dark-gradient transition-all" id="menu-mobile">
+                    <li class="middle-color light-hover home">
+                        <a href="/" class="main-menu-item transition-all"><i class="icon-home"></i></a>
+                    </li>
+
+                    <li class="middle-color light-hover back">
+                        <a href="#menu-mobile" class="main-menu-item click-slide"><i class="icon-chevron-left"></i></a>
+                    </li>
+
+                    <li class="light-color active-hover">
+                        <a href="products-grid.html" class="main-menu-item transition-all">Kategori</a>
+
+                        <ul class="mega-menu cream-bg">
+                            <li class="mega-menu-active cream-gradient"></li>
+
+                            <li class="mega-menu-box">
+                                <span class="mega-menu-title active-color clearfix">Kategori Produk : </span>
+                                <ul class="mega-menu-list">
+									{% for i in kategori %}
+                                    <li>
+                                        <a href="/kategori/{{i.id_kategori}}" class="dark-color active-hover">
+                                            {{i.nama}} ({{i.jumlah}})
+                                        </a>
+                                    </li>
+									{% endfor %}
+                                </ul>
+                            </li>
+                        </ul><!--   END Mega menu for main menu item    -->
+                    </li>
+					<li class="light-color active-hover">
+                        <a href="/cara" class="main-menu-item transition-all">Hot List</a>
+                    </li>
+                    <li class="light-color active-hover">
+                        <a href="/cara" class="main-menu-item transition-all">Cara Belanja</a>
+                    </li>
+                    {%if session['nama']%}
+                    <li class="light-color active-hover">
+                        <a href="/riwayat" class="main-menu-item transition-all">Riwayat Belanja</a>
+                    </li>
+					{%endif%}
+                    
+                </ul><!--   END Tablet and desktop main menu    -->
+
+            </nav><!--    END Main Menu    -->
+       </header>
+	   {%block isi%}{%endblock%}
+        
+
+
+       <footer>
+
+            <!-- Footer blocks  -->
+            <div class="footer-top grid-container clearfix">
+
+                <div class="grid-50 grid-parent">
+                    <div class="grid-33 tablet-grid-33">
+                        <h3 class="light-color subheader-font">
+                            <strong>Our support</strong>
+                        </h3>
+
+                        <ul class="middle-color">
+                            <li class="light-hover">
+                                <a href="#">Delivery Information</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Privacy policy</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Terms & Condition</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-33 tablet-grid-33">
+                        <h3 class="light-color subheader-font">
+                            <strong>Our service</strong>
+                        </h3>
+
+                        <ul class="middle-color">
+                            <li class="light-hover">
+                                <a href="my-account.html">My Account</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Order History</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Returns</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Site map</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-33 tablet-grid-33">
+                        <h3 class="light-color subheader-font">
+                            <strong>Information</strong>
+                        </h3>
+
+                        <ul class="middle-color">
+                            <li class="light-hover">
+                                <a href="about-us.html">About us</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Delivery information</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Privacy policy</a>
+                            </li>
+                            <li class="light-hover">
+                                <a href="#">Terms & Condition</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid-50 grid-parent">
+                    <div class="grid-50 tablet-grid-50">
+                        <h3 class="light-color subheader-font">
+                            <strong>Payment</strong>
+                        </h3>
+
+                        <p class="middle-color">
+                            Lorem ipsum dolor sit amet, de consectetur adipiscing elit
+                        </p>
+
+                        <a href="#"><img src="/static/images/icons/icon-visa-e.png" alt="Visa Electron" /></a>
+                        <a href="#"><img src="/static/images/icons/icon-mastercard.png" alt="MasterCard" /></a>
+                        <a href="#"><img src="/static/images/icons/icon-paypal.png" alt="PayPal" /></a>
+                        <a href="#"><img src="/static/images/icons/icon-visa.png" alt="Visa" /></a>
+                    </div>
+                    <div class="grid-50 tablet-grid-50">
+                        <h3 class="light-color">
+                            <strong>Newsletter</strong>
+                        </h3>
+
+                        <p class="middle-color">
+                            Lorem ipsum dolor sit amet, de consectetur adipiscing elit
+                        </p>
+
+                        <form method="POST" action="/login">
+                            <div class="input-with-button">
+                                <input type="text" placeholder="Enter your email..." name="email" class="text-input dark-color light-bg">
+                                <button type="submit" class="middle-color dark-hover"><i class="icon-plus"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div><!-- END Footer blocks  -->
+
+
+            <!-- Footer copyright and social buttons -->
+            <div class="footer-bottom grid-container clearfix">
+                <div class="footer-copyright middle-color grid-70">
+                    Copyright 2012 Shoppie. Designed by Viktor Karvai. Code by <a href="http://www.adamantium.sk" class="light-hover">Adamantum Solutions</a>. All Rights Reserved
+                </div>
+
+                <div class="footer-social grid-30">
+                    <a href="https://www.facebook.com/adamantium.solutions" class="middle-color light-hover transition-color" target="_blank">
+                        <i class="icon-facebook-sign"></i>
+                    </a>
+                    <a href="https://twitter.com/AdamantiumSol" class="middle-color light-hover transition-color" target="_blank">
+                        <i class="icon-twitter"></i>
+                    </a>
+                    <a href="http://www.linkedin.com/pub/michal-juras/28/166/375" class="middle-color light-hover transition-color" target="_blank">
+                        <i class="icon-linkedin-sign"></i>
+                    </a>
+                    <a href="http://pinterest.com/" class="middle-color light-hover transition-color" target="_blank">
+                        <i class="icon-pinterest-sign"></i>
+                    </a>
+                    <a href="https://plus.google.com/u/0/113332714808714572645/posts" class="middle-color light-hover transition-color" target="_blank">
+                        <i class="icon-google-plus-sign"></i>
+                    </a>
+                </div>
+            </div><!-- END Footer copyright and social buttons -->
+
+       </footer>
+
+
+       <!-- Scripts -->
+       <script type="text/javascript" src="/static/js/jquery-1.11.0.min.js"></script>
+       <script type="text/javascript" src="/static/js/juicy/js/jquery.juicy.js"></script>
+       <script type="text/javascript" src="/static/js/shoppie.scripts.js"></script><script type="text/javascript">
+            Global.documentReady(); 
+            Homepage.documentReady();
+       </script>
+
+       <!-- css3-mediaqueries.js for IE less than 9 -->
+       <!--[if lt IE 9]>
+       <script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+       <![endif]-->
+    </body>
+</html>

@@ -1,0 +1,102 @@
+{% extends "base.html" %} <!-- extend base layout -->
+{% block isi %} <!-- isi -->
+     <section class="page-content">
+		<div class="page-block page-block-bottom cream-bg grid-container">
+                <!--  Page block  -->
+				<div class="page-block page-block-top light-bg grid-container">
+					<div class="breadcrumbs grid-100 middle-color">
+						<a href="/" class="dark-color active-hover">Home</a>
+						<strong class="active-color">Shopping Cart</strong>
+					</div>
+				</div> <!-- END Page block  -->
+               <!-- Content  --> 
+               <div class="content-holder grid-100"> 
+                    <div class="cart-header well-shadow well-table light-bg margin-bottom hide-on-mobile">
+                        <div class="well-box-middle grid-35 tablet-grid-35">Nama Produk</div>
+                        <div class="well-box-middle align-center grid-10 tablet-grid-10">Jumlah</div>
+                        <div class="well-box-middle align-center grid-20 tablet-grid-20">Harga Satuan</div>
+                        <div class="well-box-middle align-center grid-15 tablet-grid-15 active-color">Total Harga</div>
+                        <div class="well-box-middle align-center last grid-15 tablet-grid-15">Aksi</div>
+                    </div>
+                    
+                    <div class="cart-product-list well-shadow">
+						{%for i in keranjang%}
+                        <!-- Cart product  --> 
+						<form class="content-form" action="/ubahjumlah" method="POST">
+                        <div class="cart-product well-table light-bg">
+							<input type="hidden" value="{{i.id_customer}}" name="id_customer"/>
+							<input type="hidden" value="{{i.id_produk}}" name="id_produk"/>
+							<input type="hidden" value="{{i.tanggal}}" name="tanggal"/>
+                            <div class="well-box-middle cart-product-image align-center grid-10 tablet-grid-10">
+                                <a href="/produk/{{i.id_produk}}" title="Tommy Mancini">
+                                    <img src="/static/upload/produk/{{i.gambar}}" alt="" width="60"/>
+                                </a>
+                            </div>
+                            <div class="well-box-middle well-border-gradient grid-25 tablet-grid-25">
+                                <div class="cart-product-info">
+                                    <div class="cart-product-title">
+                                        <a href="/produk/{{i.id_produk}}" title="{{i.nama}}" class="header-font dark-color active-hover"><strong>{{i.nama}}</strong></a>
+                                        </br><a href="/produk/{{i.id_produk}}" title="{{i.deskripsi_singkat}}" class="cart-product-category middle-color dark-hover">{{i.deskripsi_singkat}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="well-box-middle well-border-gradient align-center grid-10 tablet-grid-10">
+                                <input type="text" name="qty" class="text-input product-quantity dark-color light-bg" value="{{i.qty}}" onclick="$(this).select()">
+                            </div>
+                            <div class="well-box-middle well-border-gradient align-center grid-15 tablet-grid-15 middle-color">
+                                <strong>{{"Rp.{:,.2f}".format(i.harga)}}</strong>
+                            </div>
+                            <div class="well-box-middle align-center grid-15 tablet-grid-15 active-color">
+                                <strong>{{"Rp.{:,.2f}".format(i.harga * i.qty)}}</strong>
+                            </div>
+                            <div class="well-box-middle align-center last grid-15 tablet-grid-15 active-color">
+                                <strong>
+									<input type="submit"class="button-small light-color middle-gradient dark-gradient-hover" value="Ubah Jumlah">
+								</strong>
+								<strong>
+									<a href="/hapusitem/{{i.id_customer}}/{{i.id_produk}}/{{i.tanggal}}" class="button-small light-color active-gradient dark-gradient-hover">Hapus Item</a>
+								</strong>
+                            </div>
+                            <a class="cart-product-remove circle-button dark-bg active-bg-hover hide-on-desktop" href="#"><span class="cancel"></span></a>
+                        </div><!-- END Cart product  --> 
+                        </form>
+                        {%endfor%}
+                    </div>   
+                    
+               </div><!-- END Content  -->
+               
+               
+               <div class="grid-100 grid-parent margin-bottom clearfix">
+               
+                    <div class="grid-55 tablet-grid-55 cart-shipping margin-bottom">
+                        
+                    </div> 
+						{%set total = {'total':0,'count':0}%}
+						{%for k in keranjang%}
+							{% if total.update({'total': (total.total + (k.harga*k.qty))}) %} {% endif %}
+							{% if total.update({'count': (total.count + 1)}) %} {% endif %}
+                        {%endfor%}
+                    <div class="grid-45 tablet-grid-45">
+                        <div class="well-shadow well-box last light-bg align-right">
+                            <dl class="cart-sub-total middle-color clearfix">
+                                <dt class="uppercase"><b>Total Belanja : </b></dt>
+                                <dd>{{"Rp.{:,.2f}".format(total['total'])}}</dd>
+                                <dt class="uppercase"><b>Biaya Administrasi :</b></dt>
+                                <dd>Rp. {{session['administrasi']}}</dd>
+                            </dl>
+                            
+                            <dl class="cart-total clearfix">
+                                <dt class="uppercase dark-color"><b>Total:</b></dt>
+                                <dd class="active-color">{{"Rp.{:,.2f}".format(total['total']+session['administrasi'])}}</dd>
+                            </dl>
+                              
+                            <a href="/cekout1" class="button-normal button-with-icon light-color active-gradient dark-gradient-hover">
+                                Proceed to checkout <span><i class="icon-angle-right"></i></span>
+                            </a>
+                        </div>
+                    </div>                      
+               </div>
+
+           </div><!-- END Page block  -->
+	</section>
+{% endblock %} <!-- isi -->

@@ -1,0 +1,167 @@
+/* ============================== */
+/* ! Colors                       */
+/* ============================== */
+
+/* dark color */
+.dark-color,
+.dark-hover:hover,
+.dark-hover.selected {
+    color: #3e3e3e;
+}
+.dark-bg,
+.dark-bg-hover:hover,
+.dark-bg-hover.selected {
+    background-color: #3e3e3e;
+}
+.dark-border,
+.dark-border-hover:hover,
+.dark-border-hover.selected {
+    border-color: #3e3e3e;
+}
+.dark-gradient,
+.dark-gradient-hover:hover,
+.dark-gradient-hover.selected {
+    background-image: linear-gradient(bottom, #0f0f0f 0%, #3e3e3e 100%);
+    background-image: -o-linear-gradient(bottom, #0f0f0f 0%, #3e3e3e 100%);
+    background-image: -moz-linear-gradient(bottom, #0f0f0f 0%, #3e3e3e 100%);
+    background-image: -webkit-linear-gradient(bottom, #0f0f0f 0%, #3e3e3e 100%);
+    background-image: -ms-linear-gradient(bottom, #0f0f0f 0%, #3e3e3e 100%);
+    background-color: #3e3e3e;  
+}
+
+/* middle color */
+.middle-color,
+.middle-hover:hover,
+.middle-hover.selected {
+    color: #999999;
+}
+.middle-bg,
+.middle-bg-hover:hover,
+.middle-bg-hover.selected {
+    background-color: #999999;
+}
+.middle-border,
+.middle-border-hover:hover,
+.middle-border-hover.selected {
+    border-color: #999999;
+}
+.middle-gradient,
+.middle-gradient-hover:hover,
+.middle-gradient-hover.selected {
+    background-image: linear-gradient(bottom, #7b7770 0%, #999999 100%);
+    background-image: -o-linear-gradient(bottom, #7b7770 0%, #999999 100%);
+    background-image: -moz-linear-gradient(bottom, #7b7770 0%, #999999 100%);
+    background-image: -webkit-linear-gradient(bottom, #7b7770 0%, #999999 100%);
+    background-image: -ms-linear-gradient(bottom, #7b7770 0%, #999999 100%);
+    background-color: #999999;  
+}
+
+/* cream color */
+.cream-color,
+.cream-hover:hover,
+.cream-hover.selected {
+    color: #fbf9f7;
+}
+.cream-bg,
+.cream-bg-hover:hover,
+.cream-bg-hover.selected {
+    background-color: #fbf9f7;
+}
+.cream-border,
+.cream-border-hover:hover,
+.cream-border-hover.selected {
+    border-color: #fbf9f7;
+}
+.cream-gradient,
+.cream-gradient-hover:hover,
+.cream-gradient-hover.selected {
+    background-image: linear-gradient(bottom, #fbf9f7 0%, #f7f2ed 100%);
+    background-image: -o-linear-gradient(bottom, #fbf9f7 0%, #f7f2ed 100%);
+    background-image: -moz-linear-gradient(bottom, #fbf9f7 0%, #f7f2ed 100%);
+    background-image: -webkit-linear-gradient(bottom, #fbf9f7 0%, #f7f2ed 100%);
+    background-image: -ms-linear-gradient(bottom, #fbf9f7 0%, #f7f2ed 100%);
+    background-color: #fbf9f7;
+}
+
+/* light color */
+.light-color,
+.light-hover:hover,
+.light-hover.selected {
+    color: #ffffff;
+}
+.light-bg,
+.light-bg-hover:hover,
+.light-bg-hover.selected {
+    background-color: #ffffff;
+}
+.light-border,
+.light-border-hover:hover,
+.light-border-hover.selected {
+    border-color: #ffffff;
+}
+.light-gradient,
+.light-gradient-hover:hover,
+.light-gradient-hover.selected {
+    background-image: linear-gradient(bottom, #f0eae3 0%, #fbf9f7 100%);
+    background-image: -o-linear-gradient(bottom, #f0eae3 0%, #fbf9f7 100%);
+    background-image: -moz-linear-gradient(bottom, #f0eae3 0%, #fbf9f7 100%);
+    background-image: -webkit-linear-gradient(bottom, #f0eae3 0%, #fbf9f7 100%);
+    background-image: -ms-linear-gradient(bottom, #f0eae3 0%, #fbf9f7 100%);
+    background-color: #ffffff;
+    position: relative;
+}
+
+
+/* active color */
+.active-color,
+.active-hover:hover,
+.active-hover.selected {
+    color: #926c55;
+}
+.active-bg,
+.active-bg-hover:hover,
+.active-bg-hover.selected {
+    background-color: #926c55;
+}
+.active-border,
+.active-border-hover:hover,
+.active-border-hover.selected,
+.juicy-selected .active-border-selected {
+    border-color: #926c55;
+}
+.active-gradient,
+.active-gradient-hover:hover,
+.active-gradient-hover.selected {
+    background-image: linear-gradient(bottom, #6c503e 0%, #926c55 100%);
+    background-image: -o-linear-gradient(bottom, #6c503e 0%, #926c55 100%);
+    background-image: -moz-linear-gradient(bottom, #6c503e 0%, #926c55 100%);
+    background-image: -webkit-linear-gradient(bottom, #6c503e 0%, #926c55 100%);
+    background-image: -ms-linear-gradient(bottom, #6c503e 0%, #926c55 100%);
+    background-color: #926c55;
+} 
+
+.facebook-color,
+.facebook-hover:hover {
+    color: #3B5998;   
+}
+
+.twitter-color,
+.twitter-hover:hover {
+    color: #33CCFF  
+}
+
+.linkedin-color,
+.linkedin-hover:hover {
+    color: #4875B4;   
+}
+
+.pinterest-color,
+.pinterest-hover:hover {
+    color: #AB171E;   
+}
+
+.google-color,
+.google-hover:hover {
+    color: #D04028;  
+}
+

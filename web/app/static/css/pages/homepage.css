@@ -1,0 +1,119 @@
+/* ============================= */
+/* ! Homepage slider styles      */
+/* ============================= */
+
+.homepage-slider {
+    margin-top: 15px;    
+}
+
+.homepage-slider.juicy-wrapper {
+    padding: 0px;
+    margin-top: 15px;
+    max-width: 980px; 
+    max-height: 430px;
+}   
+
+.juicy-wrapper > ul {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; 
+    border-radius: 5px;
+    
+    -moz-box-shadow: 1px 2px 2px #666666;
+    -webkit-box-shadow: 1px 2px 2px #666666;
+    -o-box-shadow: 1px 2px 2px #666666;
+    box-shadow: 1px 2px 2px #666666; 
+}
+
+.juicy-wrapper ul.juicy-slicebox-animating {
+    -moz-box-shadow: 0px 0px 0px #666666;
+    -webkit-box-shadow: 0px 0px 0px #666666;
+    -o-box-shadow: 0px 0px 0px #666666;
+    box-shadow: 0px 0px 0px #666666;
+}
+
+
+.slider-header {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 25px 0px;
+    border-width: 3px;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    text-transform: uppercase;
+}
+
+.slider-subheader {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.product-slider-popup {
+    width: 250px;
+}
+
+.product-slider-popup .product-popup-left {
+    float: left;
+    width: 110px;
+}
+
+.product-slider-popup .product-popup-right {
+    float: right;
+    width: 110px;
+}
+
+.product-slider-popup .product-popup-divider {
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 50%;
+    top: 0px;
+    margin-left: -1px;
+    
+    border-left: 1px solid #e8e8e6;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);       
+    border-right: 1px solid #fefefe;
+    border-right: 1px solid rgba(250, 250, 250, 0.3);       
+}
+
+.product-slider-popup .product-popup-title a {
+    font-size: 18px;
+    color: inherit;
+}
+
+.product-slider-popup .product-popup-subtitle {
+    font-size: 12px;
+} 
+
+.product-slider-popup .product-popup-stars {
+    margin: 5px 0px;
+}
+
+.product-slider-popup .product-popup-price {
+    font-size: 20px;
+    margin: 3px 0px 8px;
+}
+
+.product-slider-popup .product-popup-button {
+    font-size: 12px;
+    padding: 3px 37px 3px 7px;
+}
+
+.product-slider-popup .product-popup-button span i {
+    padding-top: 20%;
+}
+
+.product-slider-popup.popup-top,
+.product-slider-popup.popup-bottom {
+    margin-left: 50px;
+}
+
+.product-slider-popup.popup-top .arrow,
+.product-slider-popup.popup-bottom .arrow {
+    margin-left: -70px;
+}
+
+.block-facebook-border {
+    overflow: hidden;
+}
